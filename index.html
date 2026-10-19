@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>London AI Startup Map</title>
+    <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="sidebar">
+        <header class="masthead">
+          <div>
+            <p class="eyebrow">London AI Landscape</p>
+            <h1>Startup Map</h1>
+          </div>
+          <div class="count" id="startupCount">0</div>
+        </header>
+
+        <div class="controls">
+          <label class="search-label" for="searchInput">Search</label>
+          <input id="searchInput" type="search" placeholder="Company, area, category" />
+          <div class="segmented" role="tablist" aria-label="View mode">
+            <button class="active" id="mapMode" type="button">Map</button>
+            <button id="listMode" type="button">List</button>
+          </div>
+          <button class="export-button" id="exportCsv" type="button">Export filtered CSV</button>
+        </div>
+
+        <section class="filter-section">
+          <h2>Areas</h2>
+          <div class="chips" id="areaFilters"></div>
+        </section>
+
+        <section class="filter-section">
+          <h2>Categories</h2>
+          <div class="chips" id="categoryFilters"></div>
+        </section>
+
+        <section class="filter-section">
+          <h2>Investors</h2>
+          <div class="chips" id="investorFilters"></div>
+        </section>
+
+        <section class="filter-section">
+          <h2>Data Quality</h2>
+          <div class="chips" id="qualityFilters"></div>
+        </section>
+
+        <section class="filter-section">
+          <h2>Signals</h2>
+          <label class="toggle-row">
+            <input id="conceptOnly" type="checkbox" />
+            <span>Concept Ventures portfolio only</span>
+          </label>
+        </section>
+
+        <section class="startup-list" id="startupList" aria-label="Startups"></section>
+      </aside>
+
+      <section class="map-panel" aria-label="London startup map">
+        <div class="map-toolbar">
+          <div>
+            <p class="eyebrow">Interactive London map</p>
+            <h2 id="activeAreaTitle">All London</h2>
+          </div>
+          <button id="resetFilters" type="button">Reset</button>
+        </div>
+        <div class="map-canvas" id="mapCanvas" aria-label="Draggable map of London startup locations">
+          <div id="map"></div>
+          <div class="map-hint">Drag to pan. Scroll or pinch to zoom. Hold right-click / Ctrl-drag to rotate.</div>
+        </div>
+        <div class="detail-panel" id="detailPanel">
+          <p class="eyebrow">Select a startup</p>
+          <h2>Click a marker or list item</h2>
+          <p>Each card shows summary, stage, category, area confidence, and sources.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

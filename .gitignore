@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.vercel/
+
+# Environment variables (never commit secrets)
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs and caches
+*.log
+npm-debug.log*
+.cache/
+.eslintcache
+*.tsbuildinfo
+test-results/
+playwright-report/
+__pycache__/
+*.py[cod]
+
+# OS / editor
+.DS_Store
+._*
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# News lookup cache
+data/news-cache/

@@ -1,0 +1,30 @@
+{
+  "captured": "2026-05-05",
+  "notes": "Known investor overlays for map filtering. This is intentionally partial; missing investors should be treated as unknown, not absent.",
+  "overlays": {
+    "Fyxer AI": ["Madrona", "Lakestar"],
+    "Metris": ["Octopus Ventures", "Aenu VC"],
+    "RecurseML": ["Seedcamp"],
+    "NeuroSonic": ["Entrepreneur First"],
+    "Tonk Labs": ["Entrepreneur First"],
+    "Phycobloom": ["Zero Carbon Capital"],
+    "ToffeeX": ["Presight Capital"],
+    "ElevenLabs": ["Concept Ventures", "Sequoia", "Andreessen Horowitz"],
+    "Treefera": ["Concept Ventures", "Notion"],
+    "Anam": ["Concept Ventures"],
+    "Arondite": ["Concept Ventures"],
+    "Dex": ["Concept Ventures"],
+    "Gendo": ["Concept Ventures"],
+    "Sohar Health": ["Concept Ventures"],
+    "Superlinked": ["Concept Ventures"],
+    "V-Sim": ["Concept Ventures", "EQT", "Temasek"],
+    "Waypoint": ["Concept Ventures"],
+    "Automata": ["Octopus Ventures"],
+    "nPlan": ["Google Ventures", "LocalGlobe"],
+    "Unitary": ["Plural", "Paladin Capital Group"],
+    "Omnipresent": ["Octopus Ventures"],
+    "Magdrive": ["Founders Fund"],
+    "Chattermill": ["DN Capital"],
+    "Juro": ["Eight Roads"]
+  }
+}

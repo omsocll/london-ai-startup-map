@@ -1,0 +1,1348 @@
+{
+  "captured": "2026-05-05",
+  "notes": "Expanded local dataset for a London startup map. Company selection is based on startupmap.london visible/listed companies, Parallel research snippets captured on 2026-05-05, official websites where available, and the saved Concept Ventures portfolio list. Locations are explicitly labelled by precision: exact public office/HQ, registered office, sourced area, or area estimate.",
+  "startups": [
+    {
+      "name": "Fyxer AI",
+      "website": "https://www.fyxer.com",
+      "summary": "AI executive assistant that organizes inboxes, drafts emails, and creates meeting notes for professionals.",
+      "stage": "Series B",
+      "categories": [
+        "AI",
+        "Productivity",
+        "Workflows"
+      ],
+      "area": "Holborn / Chancery Lane",
+      "area_confidence": "sourced",
+      "lat": 51.5174844,
+      "lng": -0.1126829,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/fyxer-ai",
+        "https://www.fyxer.com/for-ai-assistants",
+        "https://find-and-update.company-information.service.gov.uk/company/15189973"
+      ],
+      "location_precision": "registered_office",
+      "location_label": "Registered UK address",
+      "location_note": "Official Fyxer AI assistant info lists Chancery House, 53-64 Chancery Lane as the registered UK address. Treat as legal location unless the team confirms it is their operating office."
+    },
+    {
+      "name": "Compass Labs",
+      "website": "https://www.compasslabs.ai/",
+      "summary": "AI infrastructure for optimizing and automating decision-making on DeFi protocols.",
+      "stage": "Seed (est.)",
+      "categories": [
+        "AI",
+        "FinTech",
+        "Crypto"
+      ],
+      "area": "Old Street / City Road",
+      "area_confidence": "sourced",
+      "lat": 51.5266445,
+      "lng": -0.0882652,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.compasslabs.ai/",
+        "https://docs.compasslabs.ai/v1/support/privacy-policy",
+        "https://www.ukcompanydir.com/companies/compass-labs-ltd/"
+      ],
+      "location_precision": "registered_office",
+      "location_label": "Registered office",
+      "location_note": "Compass API docs/privacy material lists Compass Labs Ltd at 128 City Road. This is likely a registered/legal address, so treat the marker as legal-office precision rather than confirmed team workspace."
+    },
+    {
+      "name": "Metris",
+      "website": null,
+      "summary": "Collects performance and environmental data from solar installations for fault prediction and generation optimization.",
+      "stage": "Pre-Seed",
+      "categories": [
+        "AI",
+        "Energy",
+        "Climate Tech"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/metris"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Paracosmic",
+      "website": null,
+      "summary": "Transforms prompts and images into interactive game environments for faster world-building.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Gaming",
+        "Creative Tools"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Arda Biomaterials",
+      "website": "https://arda.bio/",
+      "summary": "Transforms waste proteins into plastic-free circular biomaterials for fashion, automotive, interiors, and beyond.",
+      "stage": "Seed (est.)",
+      "categories": [
+        "Biomaterials",
+        "Sustainability",
+        "Deep Tech"
+      ],
+      "area": "Southwark / Bermondsey",
+      "area_confidence": "sourced",
+      "lat": 51.4981494,
+      "lng": -0.0738603,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/arda-biomaterials",
+        "https://arda.bio/",
+        "https://arda.bio/contact"
+      ],
+      "location_precision": "exact",
+      "location_label": "Published contact address",
+      "location_note": "Arda publishes 64-66 Gedling Place, London SE1 2JS on its contact page, so this marker is set to the public company address rather than a broad White City estimate."
+    },
+    {
+      "name": "RecurseML",
+      "website": null,
+      "summary": "ML developer tools that test, benchmark, and check machine learning code in pull requests.",
+      "stage": "Seed",
+      "categories": [
+        "AI",
+        "DevTools",
+        "MLOps"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/recurse-ml"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Asteroid.ai",
+      "website": null,
+      "summary": "Runtime supervision layer for AI agents to catch unintended behaviors, enforce policies, and monitor actions.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "AgentOps",
+        "Security"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/asteroid-ai"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Synthera AI",
+      "website": "https://www.synthera.ai/",
+      "summary": "Builds proprietary generative AI models trained on historical market data across rates, FX, and commodities.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "FinTech",
+        "Quant"
+      ],
+      "area": "City of London",
+      "area_confidence": "inferred",
+      "lat": 51.513,
+      "lng": -0.089,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.synthera.ai/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "WilsonAI",
+      "website": null,
+      "summary": "AI legal assistant for in-house legal operations, request triage, and workflow automation.",
+      "stage": "Pre-Seed",
+      "categories": [
+        "AI",
+        "Legal Tech"
+      ],
+      "area": "Lambeth / Brixton",
+      "area_confidence": "inferred",
+      "lat": 51.4746,
+      "lng": -0.1081,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/wilsonai"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Genie Fertility",
+      "website": "https://www.geniefertility.com/",
+      "summary": "Biotech platform using machine learning and omics for non-invasive uterine diagnostics and fertility care.",
+      "stage": "Pre-Seed",
+      "categories": [
+        "AI",
+        "Biotech",
+        "FemTech"
+      ],
+      "area": "Euston / Drummond Street",
+      "area_confidence": "sourced",
+      "lat": 51.5262639,
+      "lng": -0.1397636,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.geniefertility.com/",
+        "https://find-and-update.company-information.service.gov.uk/company/15880325",
+        "https://www.ukcompanydir.com/companies/genie-fertility-ltd/"
+      ],
+      "location_precision": "registered_office",
+      "location_label": "Registered office",
+      "location_note": "Companies House lists 192 Drummond Street, Fourth Floor. Other directories also show Harley Street, so this remains a legal-location marker until the operating clinic/workspace is confirmed."
+    },
+    {
+      "name": "HelmGuard AI",
+      "website": "https://helmguard.ai/",
+      "summary": "AI-native trust and risk assurance platform for continuous cybersecurity intelligence and automated GRC.",
+      "stage": "Seed (est.)",
+      "categories": [
+        "AI",
+        "Cybersecurity",
+        "GRC"
+      ],
+      "area": "Fitzrovia / Great Portland Street",
+      "area_confidence": "sourced",
+      "lat": 51.5216906,
+      "lng": -0.1436148,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/helmguard-ai",
+        "https://helmguard.ai/",
+        "https://www.signalhire.com/companies/helmguard-ai"
+      ],
+      "location_precision": "exact",
+      "location_label": "Published HQ listing",
+      "location_note": "SignalHire lists HelmGuard AI headquarters at 167-169 Great Portland Street. This is stronger than the previous Shoreditch cluster, but should still be rechecked against an official company contact page when available."
+    },
+    {
+      "name": "Assuric",
+      "website": "https://www.assuric.com/",
+      "summary": "Compliance automation platform for policy generation, evidence collection, change reporting, and gap analysis.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Cybersecurity",
+        "Compliance"
+      ],
+      "area": "Hoxton / Angel",
+      "area_confidence": "sourced",
+      "lat": 51.5305527,
+      "lng": -0.0936459,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.assuric.com/",
+        "https://www.assuric.com/contact",
+        "https://www.companiesintheuk.co.uk/ltd/assuric-inc"
+      ],
+      "location_precision": "registered_office",
+      "location_label": "Registered office",
+      "location_note": "Public records link Assuric to 20 Wenlock Road, a common registered-office address. The official website only exposes contact email, so do not treat this as a confirmed operating office."
+    },
+    {
+      "name": "NeuroSonic",
+      "website": null,
+      "summary": "Clinician tool to assess cerebral arterial blood flow for stroke-risk detection and personalized intervention.",
+      "stage": "Pre-Seed (EF)",
+      "categories": [
+        "AI",
+        "MedTech",
+        "Diagnostics"
+      ],
+      "area": "Southwark / London Bridge",
+      "area_confidence": "inferred",
+      "lat": 51.5046,
+      "lng": -0.0865,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/neurosonic"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Tonk Labs",
+      "website": "https://tonk.xyz/",
+      "summary": "CLI and primitives for shared knowledge, dashboards, and agents without backend setup.",
+      "stage": "Pre-Seed / Seed (EF est.)",
+      "categories": [
+        "AI",
+        "DevTools",
+        "Data"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://tonk.xyz/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Phycobloom",
+      "website": "https://www.phycobloom.com/",
+      "summary": "Engineers algae to continuously convert CO2 into oils for sustainable fuels.",
+      "stage": "Seed",
+      "categories": [
+        "SynBio",
+        "Climate Tech",
+        "Biotech"
+      ],
+      "area": "White City / West London",
+      "area_confidence": "inferred",
+      "lat": 51.509,
+      "lng": -0.224,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.phycobloom.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Borderless",
+      "website": null,
+      "summary": "Automates sponsor licence, visa processing, and Home Office compliance workflows for international hiring.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "GovTech",
+        "HR"
+      ],
+      "area": "Westminster / Victoria",
+      "area_confidence": "inferred",
+      "lat": 51.4967,
+      "lng": -0.1439,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/borderless"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Biographica",
+      "website": "https://graphica.bio/",
+      "summary": "Applies AI-driven discovery to design crop traits for productivity, sustainability, and climate resilience.",
+      "stage": "Seed",
+      "categories": [
+        "AI",
+        "AgTech",
+        "Computational Biology"
+      ],
+      "area": "King's Cross / Euston",
+      "area_confidence": "inferred",
+      "lat": 51.5341,
+      "lng": -0.1253,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://graphica.bio/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Morta",
+      "website": "https://www.morta.io/",
+      "summary": "Connected controls and information platform replacing spreadsheet trackers for design and construction delivery.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Construction Tech",
+        "SaaS"
+      ],
+      "area": "Southwark / London Bridge",
+      "area_confidence": "inferred",
+      "lat": 51.5046,
+      "lng": -0.0865,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/morta",
+        "https://www.morta.io/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Delfa",
+      "website": null,
+      "summary": "AI startup listed by Startup Map London; product details need a deeper source pass.",
+      "stage": null,
+      "categories": [
+        "AI"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Ulyssean",
+      "website": null,
+      "summary": "AI startup listed by Startup Map London; product details need a deeper source pass.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Travel"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "ToffeeX",
+      "website": "https://toffeex.com/",
+      "summary": "Physics-driven generative design software for optimized, CAD-ready engineering parts.",
+      "stage": "Series A",
+      "categories": [
+        "AI",
+        "Engineering",
+        "Manufacturing"
+      ],
+      "area": "White City / West London",
+      "area_confidence": "inferred",
+      "lat": 51.509,
+      "lng": -0.224,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/toffeex",
+        "https://toffeex.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Nanovery",
+      "website": "https://nanovery.co.uk/",
+      "summary": "Blood-based nanorobotic sensors that bind biomarkers and emit detectable signals for faster diagnostics.",
+      "stage": null,
+      "categories": [
+        "Biotech",
+        "Diagnostics",
+        "Deep Tech"
+      ],
+      "area": "King's Cross / Euston",
+      "area_confidence": "inferred",
+      "lat": 51.5341,
+      "lng": -0.1253,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/nanovery",
+        "https://nanovery.co.uk/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "R.grid",
+      "website": "https://www.rgrid.tech/",
+      "summary": "Clinical trial automation platform that streamlines documentation and research operations.",
+      "stage": null,
+      "categories": [
+        "Health Tech",
+        "Clinical Trials",
+        "SaaS"
+      ],
+      "area": "King's Cross / Euston",
+      "area_confidence": "inferred",
+      "lat": 51.5341,
+      "lng": -0.1253,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Crypto Quantique",
+      "website": "https://www.cryptoquantique.com/",
+      "summary": "Quantum-driven silicon security and lifecycle management for connected devices.",
+      "stage": "Seed",
+      "categories": [
+        "Cybersecurity",
+        "IoT",
+        "Deep Tech"
+      ],
+      "area": "City of London",
+      "area_confidence": "inferred",
+      "lat": 51.513,
+      "lng": -0.089,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/crypto-quantique",
+        "https://www.cryptoquantique.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Nodes & Links",
+      "website": "https://www.nodeslinks.com/",
+      "summary": "Project intelligence software for planning, risk, and delivery across complex infrastructure projects.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Construction Tech",
+        "Infrastructure"
+      ],
+      "area": "Southwark / London Bridge",
+      "area_confidence": "inferred",
+      "lat": 51.5046,
+      "lng": -0.0865,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Spotted Zebra",
+      "website": "https://www.spottedzebra.co.uk/",
+      "summary": "Workforce intelligence platform for skills-based hiring, development, and internal mobility.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "HR Tech",
+        "Talent"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "FabricNano",
+      "website": "https://www.fabricnano.com/",
+      "summary": "Engineers bespoke enzymes and biocatalysts for cleaner industrial chemical and pharmaceutical production.",
+      "stage": null,
+      "categories": [
+        "Biotech",
+        "Manufacturing",
+        "Sustainability"
+      ],
+      "area": "White City / West London",
+      "area_confidence": "inferred",
+      "lat": 51.509,
+      "lng": -0.224,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/fabricnano",
+        "https://www.fabricnano.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Adclear",
+      "website": null,
+      "summary": "Startup Map London-listed company; likely operating in advertising, marketing, or commercial workflow intelligence.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Marketing Tech"
+      ],
+      "area": "Soho / Fitzrovia",
+      "area_confidence": "inferred",
+      "lat": 51.516,
+      "lng": -0.137,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Ameba",
+      "website": "https://www.ameba.co/",
+      "summary": "AI operating system for supply-chain teams to automate workflows and make faster operational decisions.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Supply Chain",
+        "SaaS"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.ameba.co/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Level Zero Health",
+      "website": "https://www.levelzerohealth.com/",
+      "summary": "Health technology company developing hormone monitoring and diagnostics infrastructure.",
+      "stage": null,
+      "categories": [
+        "Health Tech",
+        "Diagnostics",
+        "Biotech"
+      ],
+      "area": "King's Cross / Euston",
+      "area_confidence": "inferred",
+      "lat": 51.5341,
+      "lng": -0.1253,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.levelzerohealth.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Lenkie",
+      "website": "https://www.lenkie.com/",
+      "summary": "Revenue-based financing and embedded finance platform for digital businesses.",
+      "stage": null,
+      "categories": [
+        "FinTech",
+        "SaaS"
+      ],
+      "area": "City of London",
+      "area_confidence": "inferred",
+      "lat": 51.513,
+      "lng": -0.089,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.lenkie.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Magdrive",
+      "website": "https://www.magdrive.space/",
+      "summary": "Space propulsion startup building high-power electric propulsion systems for satellites.",
+      "stage": null,
+      "categories": [
+        "Space Tech",
+        "Deep Tech",
+        "Hardware"
+      ],
+      "area": "White City / West London",
+      "area_confidence": "inferred",
+      "lat": 51.509,
+      "lng": -0.224,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.magdrive.space/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "WorldOver",
+      "website": "https://www.worldover.io/",
+      "summary": "Regulatory compliance platform for launching and managing consumer products across markets.",
+      "stage": null,
+      "categories": [
+        "RegTech",
+        "Compliance",
+        "SaaS"
+      ],
+      "area": "City of London",
+      "area_confidence": "inferred",
+      "lat": 51.513,
+      "lng": -0.089,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.worldover.io/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Converge",
+      "website": "https://www.converge.io/",
+      "summary": "Construction intelligence platform using sensors and data to monitor concrete and site performance.",
+      "stage": null,
+      "categories": [
+        "Construction Tech",
+        "IoT",
+        "Data"
+      ],
+      "area": "Southwark / London Bridge",
+      "area_confidence": "inferred",
+      "lat": 51.5046,
+      "lng": -0.0865,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.converge.io/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Chattermill",
+      "website": "https://chattermill.com/",
+      "summary": "AI platform that unifies and analyzes feedback from text, voice, and surveys for customer experience teams.",
+      "stage": "Series B",
+      "categories": [
+        "AI",
+        "Customer Experience",
+        "Data"
+      ],
+      "area": "Soho / Fitzrovia",
+      "area_confidence": "inferred",
+      "lat": 51.516,
+      "lng": -0.137,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.startupmap.london/companies/chattermill",
+        "https://chattermill.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "zeroheight",
+      "website": "https://zeroheight.com/",
+      "summary": "Design system documentation and collaboration platform for product and design teams.",
+      "stage": null,
+      "categories": [
+        "Design Tools",
+        "SaaS",
+        "Developer Tools"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://zeroheight.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Genie AI",
+      "website": "https://www.genieai.co/",
+      "summary": "AI legal document drafting and contract workflow platform.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Legal Tech",
+        "SaaS"
+      ],
+      "area": "Holborn / Chancery Lane",
+      "area_confidence": "inferred",
+      "lat": 51.518,
+      "lng": -0.1119,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.genieai.co/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Flexciton",
+      "website": "https://www.flexciton.com/",
+      "summary": "AI scheduling and optimization platform for semiconductor fabs and complex manufacturing.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Manufacturing",
+        "Semiconductors"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.flexciton.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Automata",
+      "website": "https://automata.tech/",
+      "summary": "Lab automation company building robotics and workflow software for life-science labs.",
+      "stage": null,
+      "categories": [
+        "Robotics",
+        "Biotech",
+        "Automation"
+      ],
+      "area": "King's Cross / Euston",
+      "area_confidence": "inferred",
+      "lat": 51.5341,
+      "lng": -0.1253,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://automata.tech/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Limbic",
+      "website": "https://limbic.ai/",
+      "summary": "AI mental health platform supporting clinical assessment, triage, and therapy workflows.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Health Tech",
+        "Mental Health"
+      ],
+      "area": "King's Cross / Euston",
+      "area_confidence": "inferred",
+      "lat": 51.5341,
+      "lng": -0.1253,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://limbic.ai/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "nPlan",
+      "website": "https://www.nplan.io/",
+      "summary": "Machine learning platform for construction project planning, schedule risk, and delivery forecasting.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Construction Tech",
+        "Planning"
+      ],
+      "area": "Southwark / London Bridge",
+      "area_confidence": "inferred",
+      "lat": 51.5046,
+      "lng": -0.0865,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.nplan.io/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Pactio Technologies",
+      "website": "https://www.pactio.com/",
+      "summary": "Deal workflow platform for private equity and investment teams.",
+      "stage": null,
+      "categories": [
+        "FinTech",
+        "Private Equity",
+        "SaaS"
+      ],
+      "area": "Mayfair / West End",
+      "area_confidence": "inferred",
+      "lat": 51.509,
+      "lng": -0.147,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.pactio.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Unitary",
+      "website": "https://www.unitary.ai/",
+      "summary": "AI platform for contextual video and image moderation at internet scale.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Trust & Safety",
+        "Computer Vision"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.unitary.ai/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Scarlet",
+      "website": "https://www.scarlet.cc/",
+      "summary": "Platform supporting faster regulatory and quality processes for medical software and AI health products.",
+      "stage": null,
+      "categories": [
+        "Health Tech",
+        "RegTech",
+        "AI"
+      ],
+      "area": "King's Cross / Euston",
+      "area_confidence": "inferred",
+      "lat": 51.5341,
+      "lng": -0.1253,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.scarlet.cc/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Intropic",
+      "website": "https://www.intropic.io/",
+      "summary": "Financial data infrastructure company extracting structure and signal from complex market information.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "FinTech",
+        "Data"
+      ],
+      "area": "City of London",
+      "area_confidence": "inferred",
+      "lat": 51.513,
+      "lng": -0.089,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.intropic.io/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Ochre Bio",
+      "website": "https://www.ochre-bio.com/",
+      "summary": "RNA therapeutics company using computational and experimental biology to develop liver disease treatments.",
+      "stage": null,
+      "categories": [
+        "Biotech",
+        "AI",
+        "Therapeutics"
+      ],
+      "area": "King's Cross / Euston",
+      "area_confidence": "inferred",
+      "lat": 51.5341,
+      "lng": -0.1253,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.ochre-bio.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "DBX Commodities",
+      "website": "https://dbxcommodities.com/",
+      "summary": "Commodity trading and market intelligence platform for energy and environmental markets.",
+      "stage": null,
+      "categories": [
+        "FinTech",
+        "Commodities",
+        "Data"
+      ],
+      "area": "City of London",
+      "area_confidence": "inferred",
+      "lat": 51.513,
+      "lng": -0.089,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://dbxcommodities.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "ElevenLabs",
+      "website": "https://www.elevenlabs.io/",
+      "summary": "Voice AI company building expressive text-to-speech, voice cloning, and audio generation models.",
+      "stage": "Series C",
+      "categories": [
+        "AI",
+        "Audio",
+        "Generative AI"
+      ],
+      "area": "Soho / Fitzrovia",
+      "area_confidence": "inferred",
+      "lat": 51.516,
+      "lng": -0.137,
+      "concept_portfolio": true,
+      "source_urls": [
+        "https://concept.vc/portfolio",
+        "https://www.elevenlabs.io/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Treefera",
+      "website": "https://www.treefera.com/",
+      "summary": "AI platform for accurate and auditable data on trees, forests, biodiversity, and carbon assets.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Climate Tech",
+        "Data"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": true,
+      "source_urls": [
+        "https://concept.vc/portfolio",
+        "https://www.treefera.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Anam",
+      "website": "https://anam.ai",
+      "summary": "Real-time digital avatar platform that lets products add human-like video interaction at scale.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Avatars",
+        "Generative AI"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": true,
+      "source_urls": [
+        "https://concept.vc/portfolio",
+        "https://anam.ai"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Arondite",
+      "website": "https://www.arondite.com/",
+      "summary": "Builds infrastructure for safe, scalable human-machine teaming in autonomous systems.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Defence Tech",
+        "Autonomy"
+      ],
+      "area": "Westminster / Victoria",
+      "area_confidence": "inferred",
+      "lat": 51.4967,
+      "lng": -0.1439,
+      "concept_portfolio": true,
+      "source_urls": [
+        "https://concept.vc/portfolio",
+        "https://www.arondite.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Dex",
+      "website": "https://meetdex.ai/",
+      "summary": "AI-powered voice talent agent matching high-performance candidates with companies.",
+      "stage": "Seed",
+      "categories": [
+        "AI",
+        "HR Tech",
+        "Recruitment"
+      ],
+      "area": "Holborn / Chancery Lane",
+      "area_confidence": "inferred",
+      "lat": 51.518,
+      "lng": -0.1119,
+      "concept_portfolio": true,
+      "source_urls": [
+        "https://concept.vc/portfolio",
+        "https://meetdex.ai/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Gendo",
+      "website": "https://www.gendo.ai",
+      "summary": "AI-enabled cloud tooling for architectural workflows and visual production.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Architecture",
+        "Creative Tools"
+      ],
+      "area": "Southwark / London Bridge",
+      "area_confidence": "inferred",
+      "lat": 51.5046,
+      "lng": -0.0865,
+      "concept_portfolio": true,
+      "source_urls": [
+        "https://concept.vc/portfolio",
+        "https://www.gendo.ai"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Sohar Health",
+      "website": "https://www.soharhealth.com/",
+      "summary": "Healthcare infrastructure platform automating eligibility verification and utilization reporting.",
+      "stage": "Seed",
+      "categories": [
+        "Health Tech",
+        "AI",
+        "Infrastructure"
+      ],
+      "area": "King's Cross / Euston",
+      "area_confidence": "inferred",
+      "lat": 51.5341,
+      "lng": -0.1253,
+      "concept_portfolio": true,
+      "source_urls": [
+        "https://concept.vc/portfolio",
+        "https://www.soharhealth.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Superlinked",
+      "website": "https://www.superlinked.com/",
+      "summary": "Compute framework for information retrieval and vector embeddings from complex data.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Search",
+        "Data Infrastructure"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": true,
+      "source_urls": [
+        "https://concept.vc/portfolio",
+        "https://www.superlinked.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "V-Sim",
+      "website": "https://v-sim.co.uk/",
+      "summary": "Physics simulation startup founded by an ex-NVIDIA team.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Simulation",
+        "Deep Tech"
+      ],
+      "area": "King's Cross / Euston",
+      "area_confidence": "inferred",
+      "lat": 51.5341,
+      "lng": -0.1253,
+      "concept_portfolio": true,
+      "source_urls": [
+        "https://concept.vc/portfolio",
+        "https://v-sim.co.uk/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Waypoint",
+      "website": "https://waypointcommodities.com",
+      "summary": "Managed B2B marketplace for commodity chemicals.",
+      "stage": null,
+      "categories": [
+        "Marketplace",
+        "Commodities",
+        "B2B"
+      ],
+      "area": "City of London",
+      "area_confidence": "inferred",
+      "lat": 51.513,
+      "lng": -0.089,
+      "concept_portfolio": true,
+      "source_urls": [
+        "https://concept.vc/portfolio",
+        "https://waypointcommodities.com"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Juro",
+      "website": "https://juro.com/",
+      "summary": "AI-enabled contract automation platform for creating, negotiating, approving, and managing legal agreements.",
+      "stage": null,
+      "categories": [
+        "AI",
+        "Legal Tech",
+        "SaaS"
+      ],
+      "area": "Holborn / Chancery Lane",
+      "area_confidence": "inferred",
+      "lat": 51.518,
+      "lng": -0.1119,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://juro.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Omnipresent",
+      "website": "https://www.omnipresent.com/",
+      "summary": "Global employment platform helping companies hire, onboard, pay, and manage international teams.",
+      "stage": null,
+      "categories": [
+        "HR Tech",
+        "SaaS",
+        "Compliance"
+      ],
+      "area": "Shoreditch / Old Street",
+      "area_confidence": "inferred",
+      "lat": 51.5246,
+      "lng": -0.0846,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://www.omnipresent.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    },
+    {
+      "name": "Stasher",
+      "website": "https://stasher.com/",
+      "summary": "Travel marketplace connecting customers with local shops and hotels for short-term luggage storage.",
+      "stage": null,
+      "categories": [
+        "Travel",
+        "Marketplace",
+        "Consumer"
+      ],
+      "area": "Soho / Fitzrovia",
+      "area_confidence": "inferred",
+      "lat": 51.516,
+      "lng": -0.137,
+      "concept_portfolio": false,
+      "source_urls": [
+        "https://stasher.com/"
+      ],
+      "location_precision": "area_estimate",
+      "location_label": "Area estimate",
+      "location_note": "Marker is placed at a neighbourhood cluster until a public office/HQ source is verified."
+    }
+  ]
+}
