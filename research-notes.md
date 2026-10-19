@@ -38,8 +38,8 @@ Live news feature:
 - Added `server.py`, a local static server plus `/api/startup-news` endpoint.
 - Startup detail panels can now fetch recent funding/news/product updates on click via Parallel Search.
 - Results are cached in `data/news-cache/` for 6 hours to avoid repeatedly paying for the same lookup.
-- The browser never sees `PARALLEL_API_KEY`; the key stays server-side in the workspace `.env`.
-- The old static `python3 -m http.server` should be replaced with `python3 server.py` from `Startups and Venture/london-ai-map`.
+- The browser never sees `PARALLEL_API_KEY`; the key stays server-side in a local `.env` (see `.env.example`).
+- Run `python3 server.py` from the repo root instead of a plain static server so the news endpoint works.
 
 Useful source URLs surfaced during research:
 
