@@ -21,7 +21,14 @@ cp .env.example .env   # then add your own PARALLEL_API_KEY (optional, only need
 python3 server.py
 ```
 
-Open the local address printed by the server (default port 8123).
+Open the local address printed by the server (default http://localhost:8123).
+
+### Server safety defaults
+
+- Binds to `127.0.0.1` only. Set `HOST=0.0.0.0` only if you really want it reachable on your network.
+- Only serves the app files (`index.html`, `styles.css`, `app.js`, `data/startups.json`, `data/investor-overlays.json`); `.env`, `server.py`, notes and the cache are never served.
+- The news endpoint only looks up companies that are in `data/startups.json`, results are cached for 6 hours, `refresh=1` can't bypass a cache younger than 15 minutes, and uncached Parallel searches are capped at 30 per hour (`NEWS_MAX_SEARCHES_PER_HOUR`) so it can't burn your API credits.
+- Your `PARALLEL_API_KEY` stays in `.env` on the server and is never sent to the browser.
 
 ## Files
 

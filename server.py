@@ -7,6 +7,7 @@ import hashlib
 import json
 import os
 import re
+import threading
 import time
 import urllib.error
 import urllib.parse
@@ -16,10 +17,25 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-WORKSPACE = ROOT.parents[1]
 CACHE_DIR = ROOT / "data" / "news-cache"
 CACHE_TTL_SECONDS = 6 * 60 * 60
 PARALLEL_URL = "https://api.parallel.ai/v1/search"
+STARTUPS_FILE = ROOT / "data" / "startups.json"
+# Cost guards: refresh=1 can't bypass a cache younger than this, and uncached
+# Parallel calls are capped per hour so the endpoint can't burn API credits.
+MIN_REFRESH_SECONDS = 15 * 60
+MAX_SEARCHES_PER_HOUR = int(os.environ.get("NEWS_MAX_SEARCHES_PER_HOUR", "30"))
+_search_times: list[float] = []
+_search_lock = threading.Lock()
+# Only these files are served as static content (no server.py, .env, .git, notes, cache).
+STATIC_ALLOWLIST = {
+    "/",
+    "/index.html",
+    "/styles.css",
+    "/app.js",
+    "/data/startups.json",
+    "/data/investor-overlays.json",
+}
 BAD_SNIPPET_TERMS = (
     "obfuscated",
     "_next/image",
@@ -58,7 +74,7 @@ NEWS_TERMS = (
 
 
 def load_env() -> None:
-    for path in (WORKSPACE / ".env", ROOT / ".env"):
+    for path in (ROOT / ".env",):
         if not path.exists():
             continue
         for raw_line in path.read_text().splitlines():
@@ -74,9 +90,23 @@ def cache_key(name: str, website: str | None) -> str:
     return hashlib.sha256(raw).hexdigest()[:20]
 
 
+def load_startups() -> dict[str, str | None]:
+    """Map of known startup names (lower-case) to their website, from the local dataset."""
+    data = json.loads(STARTUPS_FILE.read_text())
+    return {s["name"].strip().lower(): s.get("website") for s in data.get("startups", []) if s.get("name")}
+
+
+def allow_search() -> bool:
+    now = time.time()
+    with _search_lock:
+        _search_times[:] = [t for t in _search_times if now - t < 3600]
+        if len(_search_times) >= MAX_SEARCHES_PER_HOUR:
+            return False
+        _search_times.append(now)
+        return True
+
+
 def read_cache(name: str, website: str | None, force: bool) -> dict | None:
-    if force:
-        return None
     path = CACHE_DIR / f"{cache_key(name, website)}.json"
     if not path.exists():
         return None
@@ -84,8 +114,8 @@ def read_cache(name: str, website: str | None, force: bool) -> dict | None:
         data = json.loads(path.read_text())
     except json.JSONDecodeError:
         return None
-    fetched_at = data.get("fetched_at_unix", 0)
-    if time.time() - fetched_at > CACHE_TTL_SECONDS:
+    age = time.time() - data.get("fetched_at_unix", 0)
+    if age > CACHE_TTL_SECONDS or (force and age > MIN_REFRESH_SECONDS):
         return None
     data["cached"] = True
     return data
@@ -238,8 +268,7 @@ def parallel_search(name: str, website: str | None) -> dict:
         with urllib.request.urlopen(req, timeout=90) as response:
             search = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
-        body = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Parallel API error {exc.code}: {body}") from exc
+        raise RuntimeError(f"Parallel API error {exc.code}") from exc
 
     results = normalize_results(search.get("results", []))
 
@@ -273,27 +302,53 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self) -> None:
         parsed = urllib.parse.urlparse(self.path)
         if parsed.path != "/api/startup-news":
+            if urllib.parse.unquote(parsed.path) not in STATIC_ALLOWLIST:
+                self.send_error(404)
+                return
             return super().do_GET()
 
         params = urllib.parse.parse_qs(parsed.query)
-        name = (params.get("name") or [""])[0].strip()
-        website = (params.get("website") or [""])[0].strip() or None
+        name = (params.get("name") or [""])[0].strip()[:120]
         force = (params.get("refresh") or [""])[0] == "1"
         if not name:
             self.send_json(400, {"error": "name is required"})
             return
 
+        # Only look up companies that are in the dataset, using the dataset's website,
+        # so the endpoint can't be used as a general-purpose paid search proxy.
+        startups = load_startups()
+        key = name.lower()
+        if key not in startups:
+            self.send_json(404, {"error": "Unknown startup"})
+            return
+        website = startups[key]
+
         try:
             cached = read_cache(name, website, force)
-            data = sanitize_cached_data(cached) if cached else parallel_search(name, website)
+            if cached:
+                data = sanitize_cached_data(cached)
+            elif not allow_search():
+                self.send_json(429, {"error": "News lookup limit reached. Try again later."})
+                return
+            else:
+                data = parallel_search(name, website)
             self.send_json(200, data)
         except Exception as exc:
-            self.send_json(500, {"error": str(exc), "name": name})
+            self.log_error("news lookup failed: %s", exc)
+            self.send_json(500, {"error": "Could not load startup news.", "name": name})
+
+    def do_HEAD(self) -> None:
+        if urllib.parse.urlparse(self.path).path not in STATIC_ALLOWLIST:
+            self.send_error(404)
+            return
+        super().do_HEAD()
 
 
 def main() -> None:
     port = int(os.environ.get("PORT", "8123"))
-    server = ThreadingHTTPServer(("0.0.0.0", port), Handler)
+    # Local-only by default. Set HOST=0.0.0.0 to expose it on your network (not recommended).
+    host = os.environ.get("HOST", "127.0.0.1")
+    server = ThreadingHTTPServer((host, port), Handler)
     print(f"Serving London AI map with news API at http://localhost:{port}/")
     server.serve_forever()
 

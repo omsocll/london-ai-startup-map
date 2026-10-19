@@ -48,6 +48,16 @@ function escapeHtml(value) {
     .replace(/'/g, "&#039;");
 }
 
+// Only allow http(s) links so data or API results can't inject javascript: URLs.
+function safeUrl(value) {
+  try {
+    const url = new URL(String(value ?? ""), location.href);
+    return url.protocol === "https:" || url.protocol === "http:" ? escapeHtml(url.href) : "#";
+  } catch {
+    return "#";
+  }
+}
+
 function unique(values) {
   return [...new Set(values)].sort((a, b) => a.localeCompare(b));
 }
@@ -120,36 +130,36 @@ function renderFilters() {
   const qualities = ["All", "Strong", "Usable", "Needs research"];
 
   els.areaFilters.innerHTML = areas.map((area) => (
-    `<button type="button" class="${area === state.area ? "active" : ""}" data-area="${area}">${area}</button>`
+    `<button type="button" class="${area === state.area ? "active" : ""}" data-area="${escapeHtml(area)}">${escapeHtml(area)}</button>`
   )).join("");
 
   els.categoryFilters.innerHTML = categories.map((category) => (
-    `<button type="button" class="${category === state.category ? "active" : ""}" data-category="${category}">${category}</button>`
+    `<button type="button" class="${category === state.category ? "active" : ""}" data-category="${escapeHtml(category)}">${escapeHtml(category)}</button>`
   )).join("");
 
   els.investorFilters.innerHTML = investors.map((investor) => (
-    `<button type="button" class="${investor === state.investor ? "active" : ""}" data-investor="${investor}">${investor}</button>`
+    `<button type="button" class="${investor === state.investor ? "active" : ""}" data-investor="${escapeHtml(investor)}">${escapeHtml(investor)}</button>`
   )).join("");
 
   els.qualityFilters.innerHTML = qualities.map((quality) => (
-    `<button type="button" class="${quality === state.quality ? "active" : ""}" data-quality="${quality}">${quality}</button>`
+    `<button type="button" class="${quality === state.quality ? "active" : ""}" data-quality="${escapeHtml(quality)}">${escapeHtml(quality)}</button>`
   )).join("");
 }
 
 function renderList(items) {
   els.list.innerHTML = items.map((startup) => `
-    <button type="button" class="startup-card ${startup.id === state.selectedId ? "active" : ""}" data-id="${startup.id}">
+    <button type="button" class="startup-card ${startup.id === state.selectedId ? "active" : ""}" data-id="${escapeHtml(startup.id)}">
       <span class="card-logo">${renderLogo(startup)}</span>
       <span class="card-copy">
-        <h3>${startup.name}</h3>
-        <p>${startup.summary}</p>
+        <h3>${escapeHtml(startup.name)}</h3>
+        <p>${escapeHtml(startup.summary)}</p>
         <span class="meta-row">
-          <span class="pill">${startup.area}</span>
-          <span class="pill">${startup.stage || "Stage unknown"}</span>
+          <span class="pill">${escapeHtml(startup.area)}</span>
+          <span class="pill">${escapeHtml(startup.stage || "Stage unknown")}</span>
           ${startup.concept_portfolio ? '<span class="pill concept-pill">Concept</span>' : ""}
-          <span class="pill quality-pill quality-${slugify(startup.quality)}">${startup.quality}</span>
-          ${startup.categories.slice(0, 3).map((category) => `<span class="pill">${category}</span>`).join("")}
-          ${startup.investors.slice(0, 2).map((investor) => `<span class="pill investor-pill">${investor}</span>`).join("")}
+          <span class="pill quality-pill quality-${slugify(startup.quality)}">${escapeHtml(startup.quality)}</span>
+          ${startup.categories.slice(0, 3).map((category) => `<span class="pill">${escapeHtml(category)}</span>`).join("")}
+          ${startup.investors.slice(0, 2).map((investor) => `<span class="pill investor-pill">${escapeHtml(investor)}</span>`).join("")}
         </span>
       </span>
     </button>
@@ -183,7 +193,7 @@ function renderNews(startup) {
       <section class="news-panel">
         <div class="news-heading">
           <h3>Recent funding & news</h3>
-          <button type="button" data-news-refresh="${startup.id}">Check latest</button>
+          <button type="button" data-news-refresh="${escapeHtml(startup.id)}">Check latest</button>
         </div>
         <p class="news-muted">Pulls recent updates with Parallel and caches them locally for 6 hours.</p>
       </section>
@@ -194,7 +204,7 @@ function renderNews(startup) {
       <section class="news-panel">
         <div class="news-heading">
           <h3>Recent funding & news</h3>
-          <button type="button" data-news-refresh="${startup.id}">Try again</button>
+          <button type="button" data-news-refresh="${escapeHtml(startup.id)}">Try again</button>
         </div>
         <p class="news-error">${escapeHtml(news.error)}</p>
       </section>
@@ -208,13 +218,13 @@ function renderNews(startup) {
           <h3>Recent funding & news</h3>
           <p class="news-muted">Updated ${escapeHtml(news.fetched_at || "recently")}${news.cached ? " (cached)" : ""}</p>
         </div>
-        <button type="button" data-news-refresh="${startup.id}">Refresh</button>
+        <button type="button" data-news-refresh="${escapeHtml(startup.id)}">Refresh</button>
       </div>
       ${results.length ? `
         <div class="news-list">
           ${results.map((item) => `
             <article class="news-item">
-              <a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a>
+              <a href="${safeUrl(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a>
               <p>${escapeHtml(item.excerpt || "No excerpt available.")}</p>
               ${item.publish_date ? `<span>${escapeHtml(item.publish_date)}</span>` : ""}
             </article>
@@ -227,9 +237,9 @@ function renderNews(startup) {
 
 function renderLogo(startup) {
   const url = logoUrl(startup);
-  const fallback = `<span class="logo-fallback">${initials(startup.name)}</span>`;
+  const fallback = `<span class="logo-fallback">${escapeHtml(initials(startup.name))}</span>`;
   if (!url) return fallback;
-  return `<span class="logo-image"><img src="${url}" alt="${startup.name} logo" loading="lazy" referrerpolicy="no-referrer" /></span>`;
+  return `<span class="logo-image"><img src="${safeUrl(url)}" alt="${escapeHtml(startup.name)} logo" loading="lazy" referrerpolicy="no-referrer" /></span>`;
 }
 
 function createMarker(startup) {
@@ -302,25 +312,25 @@ function renderDetail() {
     <div class="detail-heading">
       <span class="detail-logo">${renderLogo(startup)}</span>
       <span>
-        <p class="eyebrow">${startup.area}${startup.concept_portfolio ? " · Concept Ventures portfolio" : ""}</p>
-        <h2>${startup.name}</h2>
+        <p class="eyebrow">${escapeHtml(startup.area)}${startup.concept_portfolio ? " · Concept Ventures portfolio" : ""}</p>
+        <h2>${escapeHtml(startup.name)}</h2>
       </span>
     </div>
-    <p>${startup.summary}</p>
+    <p>${escapeHtml(startup.summary)}</p>
     <div class="detail-grid">
-      <div class="detail-cell"><strong>Stage</strong><span>${startup.stage || "Unknown"}</span></div>
-      <div class="detail-cell"><strong>Categories</strong><span>${startup.categories.join(", ")}</span></div>
+      <div class="detail-cell"><strong>Stage</strong><span>${escapeHtml(startup.stage || "Unknown")}</span></div>
+      <div class="detail-cell"><strong>Categories</strong><span>${escapeHtml(startup.categories.join(", "))}</span></div>
       <div class="detail-cell"><strong>Location</strong><span>${escapeHtml(locationLabel(startup))}</span></div>
-      <div class="detail-cell"><strong>Data Quality</strong><span>${startup.quality}</span></div>
+      <div class="detail-cell"><strong>Data Quality</strong><span>${escapeHtml(startup.quality)}</span></div>
       <div class="detail-cell"><strong>Source Count</strong><span>${(startup.source_urls || []).length}</span></div>
       <div class="detail-cell"><strong>Map Precision</strong><span>${escapeHtml(startup.location_precision || "area")}</span></div>
       <div class="detail-cell"><strong>Concept Portfolio</strong><span>${startup.concept_portfolio ? "Yes" : "No"}</span></div>
-      <div class="detail-cell"><strong>Investors</strong><span>${startup.investors.length ? startup.investors.join(", ") : "Unknown"}</span></div>
-      <div class="detail-cell"><strong>Website</strong><span>${startup.website ? `<a href="${startup.website}" target="_blank" rel="noreferrer">Open</a>` : "Unknown"}</span></div>
+      <div class="detail-cell"><strong>Investors</strong><span>${startup.investors.length ? escapeHtml(startup.investors.join(", ")) : "Unknown"}</span></div>
+      <div class="detail-cell"><strong>Website</strong><span>${startup.website ? `<a href="${safeUrl(startup.website)}" target="_blank" rel="noreferrer">Open</a>` : "Unknown"}</span></div>
     </div>
     ${startup.location_note ? `<p class="location-note">${escapeHtml(startup.location_note)}</p>` : ""}
     <div class="source-links">
-      ${(startup.source_urls || []).slice(0, 4).map((url, index) => `<a href="${url}" target="_blank" rel="noreferrer">Source ${index + 1}</a>`).join("")}
+      ${(startup.source_urls || []).slice(0, 4).map((url, index) => `<a href="${safeUrl(url)}" target="_blank" rel="noreferrer">Source ${index + 1}</a>`).join("")}
     </div>
     ${renderNews(startup)}
   `;
@@ -578,5 +588,5 @@ Promise.all([
     render();
   })
   .catch((error) => {
-    els.detail.innerHTML = `<h2>Could not load startup data</h2><p>${error.message}</p>`;
+    els.detail.innerHTML = `<h2>Could not load startup data</h2><p>${escapeHtml(error.message)}</p>`;
   });
